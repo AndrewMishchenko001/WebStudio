@@ -1,0 +1,66 @@
+%flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%container {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%button {
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+%list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%second-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: var(--title-text-color);
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+%links {
+  text-decoration: none;
+  color: getColor("title");
+
+  &:hover,
+  &:focus {
+    color: getColor("accent");
+  }
+}
+
+%timing-process-allin {
+  transition: background-color $timing-function $timing-process,
+    color $timing-function $timing-process,
+    box-shadow $timing-function $timing-process;
+}
+%timing-process-color {
+  transition: color $timing-function $timing-process;
+}
+
+%timing-process-backg {
+  transition: background-color $timing-process $timing-function;
+}
+%timing-process-shadow {
+  transition: box-shadow $timing-function $timing-process;
+}
+%timing-process-border {
+  transition: border-color $timing-function $timing-process;
+}
