@@ -1,154 +1,86 @@
 .page-header {
-  position: relative;
   background-color: getColor("white");
   border-bottom: 1px solid #ececec;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (max-width: 767px) {
-    display: block;
-    width: auto;
+}
+
+.container {
+  @extend %container;
+}
+.container--flex {
+  @extend %flex-centered;
+}
+
+.main-nav__list {
+  font-weight: $font-weight-medium;
+  @extend %flex-centered;
+  @extend %list;
+}
+
+.main-nav {
+  @extend %flex-centered;
+  font-weight: $font-weight-medium;
+  line-height: 1.14;
+}
+
+.main-nav__item {
+  position: relative;
+}
+
+.main-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.main-nav__link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @extend %links;
+  @extend %timing-process-color;
+}
+
+.main-nav__link--current {
+  position: relative;
+  color: getColor("accent");
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+
+    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+    background-color: getColor("accent");
   }
 }
-.menu-container {
+
+.contacts {
+  @extend %list;
   display: flex;
   align-items: center;
-  @media screen and (max-width: 767px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 100vh;
-    width: 100vw;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow-y: scroll;
-    padding: 48px 40px;
-    background-color: getColor("white");
-    margin: 0;
+  margin-left: auto;
+  font-weight: $font-weight-medium;
+}
 
-    transform: translateX(-50%) translateY(-100%) scale(0);
-    transition: transform $timing-process $timing-function;
+.contacts__item:not(:last-child) {
+  margin-right: 30px;
+}
+.contacts__icon {
+  margin-right: 10px;
+}
 
-    z-index: 2;
+.contacts__link {
+  @extend %flex-centered;
+  @extend %links;
+  @extend %timing-process-color;
 
-    &.is-open {
-      transform: translateX(-50%) translateY(0) scale(1);
-      opacity: 1;
-      visibility: visible;
-      margin: 0;
-    }
-  }
-
-  // .container {
-  //   @extend %container;
-  // }
-  .container--flex {
-    @media screen and (max-width: 767px) {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      min-width: 450px;
-
-      padding: 16px 16px 15px 15px;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-  .main-nav {
-    @media screen and (max-width: 767px) {
-    }
-
-    @media screen and (min-width: 768px) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    font-weight: $font-weight-medium;
-    line-height: 1.14;
-  }
-
-  .main-nav__list {
-    @media screen and (min-width: 768px) {
-      font-weight: $font-weight-medium;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-  }
-
-  .main-nav__item {
-    position: relative;
-  }
-
-  .main-nav__item:not(:last-child) {
-    margin-right: 50px;
-  }
-
-  .main-nav__link {
-    display: inline-block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    @extend %links;
-    @extend %timing-process-color;
-  }
-
-  .main-nav__link--current {
-    position: relative;
-    color: getColor("accent");
-
-    &::after {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      width: 100%;
-      height: 4px;
-      bottom: 0;
-      left: 0;
-
-      border-radius: 2px;
-      margin: 0;
-      padding: 0;
-      background-color: getColor("accent");
-    }
-  }
-
-  .contacts {
-    @extend %list;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    font-weight: $font-weight-medium;
-  }
-
-  .contacts__item:not(:last-child) {
-    margin-right: 30px;
-  }
-  .contacts__icon {
-    margin-right: 10px;
-  }
-
-  .contacts__link {
-    @extend %flex-centered;
-    @extend %links;
-    @extend %timing-process-color;
-
-    fill: currentColor;
-    color: getColor("primary-text");
-  }
-  .menu-container {
-    display: flex;
-    align-items: center;
-  }
+  fill: currentColor;
+  color: getColor("primary-text");
 }
