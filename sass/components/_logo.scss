@@ -7,11 +7,27 @@
 
   line-height: 1.17;
   text-decoration: none;
+
+  @media (max-width: $max-width-mobile) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    font-size: 26px;
+    margin-right: 93px;
+  }
 }
 
-.page-header__logo {
-  margin-right: 93px;
+@media (max-width: $max-width-tablet) {
+  .page-header__logo {
+    margin-right: 88px;
+  }
 }
+
+// .page-header__logo {
+//   margin-right: 93px;
+// }
 .logo__text {
   color: getColor("accent");
 }
