@@ -21,13 +21,29 @@ h3 {
   padding-left: 15px;
   padding-right: 15px;
 
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  @media screen and (min-width: $min-width-mobile) {
+    width: 480px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $min-width-tablet) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: $min-width-desktop) {
+    width: 1200px;
+  }
 }
 
 .section {
-  padding: $section-padding;
+  padding: 60px 0;
+
+  @media (min-width: $min-width-desktop) {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 94px 0;
+  }
 }
 
 .pictblock {
