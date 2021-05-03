@@ -79,11 +79,11 @@
   transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
-@media screen and (max-width: 767px) {
-  .menu-container {
-    position: absolute;
+@media (max-width: 767px) {
+  .js-menu-container {
+    position: fixed;
     top: 0;
-    left: 50%;
+    left: 0;
     height: 100vh;
     width: 100vw;
     z-index: 2;
@@ -101,16 +101,16 @@
     padding: 48px 40px;
     background-color: #ffffff;
     margin: 0;
-    -webkit-transform: translateX(-50%) translateY(-100%) scale(0);
-            transform: translateX(-50%) translateY(-100%) scale(0);
+    -webkit-transform: translateX(100%) translateY(-100%) scale(0);
+            transform: translateX(100%) translateY(-100%) scale(0);
     -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .menu-container.is-open {
-    -webkit-transform: translateX(-50%) translateY(0) scale(1);
-            transform: translateX(-50%) translateY(0) scale(1);
+  .js-menu-container.is-open {
+    -webkit-transform: translateX(0) translateY(0) scale(1);
+            transform: translateX(0) translateY(0) scale(1);
     opacity: 1;
     visibility: visible;
     margin: 0;
@@ -150,6 +150,9 @@
     outline: none;
     fill: currentColor;
     color: black;
+  }
+  .menu-close:hover, .menu-close:focus {
+    color: #2196f3;
   }
   .mobile-nav__list {
     list-style: none;
@@ -221,13 +224,13 @@
   }
 }
 
-@media screen and (max-width: 767px) and (max-width: 480px) {
+@media (max-width: 767px) and (max-width: 480px) {
   .mobile-socils__item {
     margin-top: 10px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .menu-button {
     display: none;
   }
@@ -503,6 +506,13 @@ h3 {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .hero-section__title {
+    line-height: 1.36;
+    font-size: 44px;
+  }
 }
 
 .hero-section__container {
