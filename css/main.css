@@ -1,4 +1,4 @@
-.main-nav__list, .contacts__link, .modal__button, .checkbox, .socials__link, .socials, .footer-socials__list, .clients, .clients__item, .clients__link, .button--footer, .lots, .cards__text {
+.main-nav__list, .contacts__link, .modal__button, .checkbox, .socials__link, .socials, .footer-socials__list, .clients, .clients__link, .button--footer, .lots, .cards__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -779,11 +779,77 @@ h3 {
   margin-right: 93px;
 }
 
+@media (max-width: 767px) {
+  .clients__title {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .clients__title {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
+.clients__container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1199px) {
+  .clients {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .clients {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .clients__item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .clients__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 1170px;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+  }
+}
+
 .clients__link {
-  width: 170px;
-  height: 92px;
   border-radius: 4px;
   border: 1px solid #afb1b8;
+  padding: 0;
+  margin: 0;
   fill: currentColor;
   color: #afb1b8;
 }
@@ -793,19 +859,38 @@ h3 {
   border-color: #2196f3;
 }
 
-.clients__item + .clients__item {
-  margin-left: 30px;
+@media (min-width: 480px) {
+  .clients__link {
+    width: 210px;
+    height: 92px;
+  }
 }
 
-@media (max-width: 767px) {
-  .team__title {
-    font-size: 28px;
+@media (min-width: 768px) {
+  .clients__link {
+    width: 226px;
+    height: 92px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .clients__link {
+    width: 170px;
+    height: 90px;
   }
 }
 
 @media (max-width: 767px) {
   .team__title {
-    font-size: 50px;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .team__title {
+    margin-bottom: 30px;
+    font-size: 28px;
   }
 }
 

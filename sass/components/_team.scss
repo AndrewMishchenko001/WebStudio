@@ -2,10 +2,12 @@
   @extend %second-title;
 
   @media (max-width: $max-width-mobile) {
+    margin-bottom: 30px;
     font-size: 28px;
   }
-  @media (max-width: $max-width-mobile) {
-    font-size: 50px;
+  @media (max-width: $max-width-tablet) {
+    margin-bottom: 30px;
+    font-size: 28px;
   }
 }
 
