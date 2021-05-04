@@ -1,4 +1,4 @@
-.main-nav__list, .contacts__link, .modal__button, .checkbox, .socials__link, .socials, .footer-socials__list, .clients, .clients__item, .clients__link, .team__list, .button--footer, .lots, .cards__text {
+.main-nav__list, .contacts__link, .modal__button, .checkbox, .socials__link, .socials, .footer-socials__list, .clients, .clients__item, .clients__link, .button--footer, .lots, .cards__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -797,23 +797,82 @@ h3 {
   margin-left: 30px;
 }
 
+@media (max-width: 767px) {
+  .team__title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .team__title {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1200px) {
+  .team__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
 .team {
   background-color: #f5f4fa;
-  padding: 94px 0px;
-  max-width: 1600px;
+  padding: 60px 0;
   margin: 0 auto;
 }
 
-.team__item + .team__item {
-  margin-left: 30px;
+@media (min-width: 1200px) {
+  .team {
+    padding: 94px 0px;
+    max-width: 1600px;
+  }
 }
 
 .team__item {
-  width: 270px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .team__item {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .team__item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team__item {
+    width: 270px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .team__item:last-child {
+    margin-right: 0px;
+  }
+}
+
+.team__item > .pictblock {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team__names {
@@ -835,9 +894,29 @@ h3 {
   text-align: center;
 }
 
-.team__container {
-  padding-top: 30px;
-  padding-bottom: 30px;
+@media (min-width: 320px) {
+  .team__container {
+    padding-top: 30px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team__container {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .team__box {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 767px) {
+  .team__box {
+    padding: 0;
+  }
 }
 
 @media (min-width: 768px) {
