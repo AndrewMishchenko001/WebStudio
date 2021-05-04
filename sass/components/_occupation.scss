@@ -1,5 +1,10 @@
 .occupation__title {
   @extend %second-title;
+
+  @media (max-width: $max-width-mobile) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 }
 .occupation__list {
   @extend %list;
@@ -9,7 +14,11 @@
   position: relative;
 }
 .occupation__item {
-  width: 370px;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 .occupation__text {
   position: absolute;
@@ -36,5 +45,13 @@
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.occupation__container {
+  margin: 0 auto;
+
+  @media (max-width: $max-width-tablet) {
+    display: none;
   }
 }

@@ -1119,6 +1119,13 @@ h3 {
   color: #ffffff;
 }
 
+@media (max-width: 767px) {
+  .occupation__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
 .occupation__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1130,7 +1137,11 @@ h3 {
 }
 
 .occupation__item {
-  width: 370px;
+  margin-right: 30px;
+}
+
+.occupation__item:last-child {
+  margin-right: 0;
 }
 
 .occupation__text {
@@ -1157,6 +1168,16 @@ h3 {
 
 .occupation__item:last-child {
   margin-right: 0;
+}
+
+.occupation__container {
+  margin: 0 auto;
+}
+
+@media (max-width: 1199px) {
+  .occupation__container {
+    display: none;
+  }
 }
 
 .lots__button {
