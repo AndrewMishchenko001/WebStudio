@@ -1,40 +1,57 @@
-.page-footer > .container {
-  display: flex;
-  align-items: baseline;
-  // justify-content: space-between;
-  // лучше использовать , чем марджини - как по мне)
-  //но расстояние будет чуть отличатся от макета - но практичней
-  padding-top: 59px;
-  padding-bottom: 59px;
-}
 .page-footer {
   background-color: getColor("background-black");
-  max-width: 1600px;
-  height: 252px;
   color: getColor("white");
 
-  margin-left: auto;
-  margin-right: auto;
+  @media (max-width: $max-width-tablet) {
+    padding: 60px 0;
+  }
+  @media (min-width: $min-width-desktop) {
+    max-width: 1600px;
+    padding: 60px 0;
+
+    margin: 0 auto;
+  }
 }
 
-.page-footer__conteiner {
-  display: flex;
-  flex-direction: column;
-  margin-right: 70px;
+.page-footer__box {
+  margin: 0 auto;
+
+  @media (min-width: $min-width-desktop) {
+    display: flex;
+    align-items: baseline;
+  }
 }
+
 .address {
-  font-style: normal;
-  font-size: 14px;
+  @media (max-width: $max-width-tablet) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 
-  margin-top: 0;
-  margin-bottom: 0;
-  letter-spacing: 0.03em;
-  line-height: 1.6;
+  @media screen and (min-width: $min-width-desktop) {
+    margin-right: 70px;
+  }
 }
+
+// .address {
+//   font-style: normal;
+//   font-size: 14px;
+
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   letter-spacing: 0.03em;
+//   line-height: 1.6;
+// }
+
 .address__text {
   margin-top: 0;
   margin-bottom: 9px;
+
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  font-style: normal;
 }
+
 .address__link {
   display: inline-block;
   font-style: normal;
@@ -62,17 +79,33 @@
   text-transform: uppercase;
   line-height: 1.14;
   letter-spacing: 0.03em;
+
+  @media (max-width: $max-width-tablet) {
+    text-align: center;
+  }
 }
 
 .form-footer__container {
-  display: flex;
-  flex-direction: column;
+  @media (min-width: $min-width-mobile) {
+    display: flex;
+  }
+  @media (max-width: $max-width-tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
-  width: 570px;
-}
 .form-footer__flex {
-  display: flex;
+  @media (min-width: $min-width-mobile) {
+    display: flex;
+
+    @media (max-width: $max-width-tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
+
 .form-footer__label {
   display: inline-block;
   margin-bottom: 20px;
