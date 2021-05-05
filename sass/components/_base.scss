@@ -35,6 +35,11 @@ h3 {
   }
 }
 
+.pictblock {
+  display: block;
+  max-width: 100%;
+}
+
 .section {
   padding: 60px 0;
 
@@ -44,8 +49,4 @@ h3 {
     margin-right: auto;
     padding: 94px 0;
   }
-}
-
-.pictblock {
-  display: block;
 }

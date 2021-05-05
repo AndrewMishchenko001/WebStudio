@@ -38,5 +38,8 @@
   margin-left: 10px;
 }
 .footer-socials {
-  margin-right: 93px;
+  margin-right: 87px;
+  @media (max-width: $max-width-mobile) {
+    margin-right: 0;
+  }
 }
