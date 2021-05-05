@@ -21,9 +21,26 @@
 }
 .lots {
   @extend %list;
-  @extend %flex-centered;
-  margin-bottom: 50px;
+
+  @media (max-width: $max-width-mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 40px;
+  }
+  @media (min-width: $min-width-tablet) {
+    justify-content: center;
+    margin-bottom: 14px;
+    display: flex;
+  }
+  @media (min-width: $min-width-desktop) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
+// @extend %flex-centered;
+// margin-bottom: 50px;
+
 .lots__item {
   align-items: center;
   margin-right: 9px;
@@ -34,22 +51,16 @@
 }
 .cards {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: calc(-1 * (#{$card-set-gep}));
-  margin-right: calc(-1 * (#{$card-set-gep}));
+
+  @media (min-width: $min-width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .cards__item {
-  /* height: 404px; */
   display: block;
-  width: 370px;
 
-  flex-basis: calc(100% / 3 - 1 * (#{$card-set-gep}));
-
-  margin-right: $card-set-gep;
-  margin-bottom: $card-set-gep;
   @extend %timing-process-shadow;
 
   &:nth-child(3n) {
@@ -59,6 +70,24 @@
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  @media (max-width: $max-width-mobile) {
+    max-width: 450px;
+    margin-bottom: 30px;
+  }
+  @media (min-width: $min-width-tablet) and (max-width: $max-width-tablet) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+  @media (min-width: 1200px) {
+    width: 370px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+
+    .card__item:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -88,14 +117,25 @@
   width: 100%;
 
   margin: 0;
-  padding: 63px 24px;
+  // padding: 63px 24px;
   letter-spacing: 0.03em;
   line-height: 1.5;
   color: getColor("white");
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   transition: transform $timing-process $timing-function;
+
+  @media (max-width: $max-width-mobile) {
+    padding: 77px 24px;
+  }
+  @media (min-width: $min-width-tablet) {
+    padding: 49px 24px;
+  }
+  @media (min-width: $min-width-desktop) {
+    padding: 63px 24px;
+  }
 }
+
 .cards__item:hover .cards__text {
   transform: translateY(0);
 }
