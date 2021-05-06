@@ -1410,7 +1410,7 @@ h3 {
 
 @media screen and (max-width: 767px) {
   .button--footer {
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
     text-align: center;
   }
 }
