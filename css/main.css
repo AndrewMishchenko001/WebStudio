@@ -844,6 +844,8 @@ h3 {
 }
 
 .footer-socials__link {
+  color: #ffffff;
+  fill: currentColor;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
